@@ -1,0 +1,25 @@
+<html>
+<header>
+<script src="http://cdn1.lncld.net/static/js/2.1.1/av-min.js"></script>
+</header>
+<script>
+var APP_ID = '92DARn5UzLhHKouee6geTXLo-9Nh9j0Va';
+var APP_KEY = 'g9vX0zSdBiXW7uEbIFHTH2p5';
+AV.init({
+  appId: APP_ID,
+  appKey: APP_KEY,
+  region: 'cn'
+});
+
+var TestObject = AV.Object.extend('TestObject');
+var testObject = new TestObject();
+testObject.save({
+  words: 'Hello World!'
+}).then(function(object) {
+  alert('LeanCloud Rocks!');
+})
+</script>
+<body>
+</body>
+
+</html>
