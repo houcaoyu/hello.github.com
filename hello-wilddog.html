@@ -7,8 +7,11 @@ var config = {
   syncURL: "https://hello-wild-dog.wilddogio.com" //输入节点 URL
 };
 wilddog.initializeApp(config);
-var ref = wilddog.sync().ref();
-ref.set({"aaa":"bbb"})
+var ref = wilddog.sync().ref('/contents/1');
+ref.child("Jobs").set({
+    "full_name": "Steve Jobs",
+    "gender": "male"
+});
 </script>
 <body>
 </body>
