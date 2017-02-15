@@ -8,12 +8,10 @@ var config = {
 };
 wilddog.initializeApp(config);
 var ref = wilddog.sync().ref('/contents');
-ref.on('child_added',function(snapshot,error){
-  if(error){
-    console.log('error',error)
-  }else{
+ref.on('child_added',function(snapshot){
+  
     console.log(snapshot.val())
-  }
+
 })
 </script>
 <body>
