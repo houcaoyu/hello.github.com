@@ -1,0 +1,15 @@
+<html>
+<head>
+<script src="https://cdn.wilddog.com/sdk/js/2.5.1/wilddog.js"></script>
+</head>
+<script>
+var config = {
+  syncURL: "https://hello-wild-dog.wilddogio.com" //输入节点 URL
+};
+wilddog.initializeApp(config);
+var ref = wilddog.sync().ref();
+ref.set({"aaa":"bbb"})
+</script>
+<body>
+</body>
+</html>
