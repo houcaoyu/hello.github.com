@@ -12,7 +12,7 @@ ref.on('child_added',function(snapshot,error){
   if(error){
     console.log('error',error)
   }else{
-    console.log(snapshot)
+    console.log(snapshot.val())
   }
 })
 </script>
